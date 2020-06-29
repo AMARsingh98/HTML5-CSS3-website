@@ -120,23 +120,8 @@ body{
             weight:90px
         }
         
-        /*main-col
-        article#main-col{
-            float:left;
-            Width:35%;
-           
-
-        }
-        /*side bar
-
-        aside#sidebar{
-            float:left;
-            width:30%;
-            margin-top:10px;
-        }  */ 
-        /*footer*/
         footer {
-            padding:5px;
+            padding:20px;
             margin-top:30%;  
             color:white;
             background-color: #e8491d;
