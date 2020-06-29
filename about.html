@@ -71,178 +71,348 @@
         
     </div>
 </section>  
-<div class="container">  
-    <form id="contact" action="" method="post">
-      <h3>Colorlib Contact Form</h3>
-      <h4>Contact us for custom quote</h4>
-      <fieldset>
-        <input placeholder="Your name" type="text" tabindex="1" required autofocus>
-      </fieldset>
-      <fieldset>
-        <input placeholder="Your Email Address" type="email" tabindex="2" required>
-      </fieldset>
-      <fieldset>
-        <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
-      </fieldset>
-      <fieldset>
-        <input placeholder="Your Web Site (optional)" type="url" tabindex="4" required>
-      </fieldset>
-      <fieldset>
-        <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
-      </fieldset>
-      <fieldset>
-        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-      </fieldset>
-      <p class="copyright">Designed by <a href="https://colorlib.com" target="_blank" title="Colorlib">Colorlib</a></p>
-    </form>
-  </div>
+<section id="contact">
+  
+    <h1 class="section-header">CONTACT</h1>
+    
+    <div class="contact-wrapper">
+      
+        <!---------------- 
+  
+        CONTACT PAGE LEFT 
+      
+        -----------------> 
+      
+      <form class="form-horizontal" role="form" method="post" action="contact.php">
+         
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="">
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="">
+          </div>
+        </div>
+  
+        <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message"></textarea>
+        
+        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+          <div class="button">
+            <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+          </div>
+        
+        </button>
+        
+      </form>
+      
+        <!---------------- 
+  
+        CONTACT PAGE RIGHT 
+      
+        -----------------> 
+      
+        <div class="direct-contact-container">
+  
+          <ul class="contact-list">
+            <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Seattle | WA</span></i></li>
+            
+            <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
+            
+            <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">emailme@gmail.com</a></span></i></li>
+            
+          </ul>
+  
+          <hr>
+          <ul class="social-media-list">
+            <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-github" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-codepen" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+          <hr>
+  
+          <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+  
+        </div>
+      
+    </div>
+    
+  </section>  
+    
   <style>
-         @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
-* {
+      body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-body {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-weight: 100;
-  font-size: 12px;
-  line-height: 30px;
-  color: #777;
-  background: #4CAF50;
-}
-
-.container {
-  max-width: 400px;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-
-#contact input[type="text"],
-#contact input[type="email"],
-#contact input[type="tel"],
-#contact input[type="url"],
-#contact textarea,
-#contact button[type="submit"] {
-  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+  
 }
 
 #contact {
-  background: #F9F9F9;
-  padding: 25px;
-  margin: 150px 0;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  width: 100%;
+  height: 100vh;
+  background-color: #111;
+  overflow: hidden;
+  padding-bottom: 200px;
 }
 
-#contact h3 {
-  display: block;
-  font-size: 30px;
-  font-weight: 300;
-  margin-bottom: 10px;
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 50px;
+  margin-bottom: 50px;
+  font: 300 60px 'Oswald', sans-serif;
+  letter-spacing: 6px;
+  color: #fff;
+  margin-bottom: 25px;
 }
 
-#contact h4 {
-  margin: 5px 0 15px;
-  display: block;
-  font-size: 13px;
+.contact-wrapper {
+  margin: 0 auto;
+  padding-top: 20px;
+  position: relative;
+  max-width: 800px;
+}
+
+/* Begin Left Contact Page */
+.form-horizontal {
+  float: left;
+  max-width: 400px;
+  font-family: 'Lato';
   font-weight: 400;
 }
 
-fieldset {
-  border: medium none !important;
-  margin: 0 0 10px;
-  min-width: 100%;
-  padding: 0;
+.form-control, textarea {
+  max-width: 400px;
+  background-color: #111;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 400px;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.button {
+  width: 400px;
+  height: 34px;
+  transition: all .2s ease-in-out;
+}
+
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font: 300 14px 'Lato', sans-serif;
+  letter-spacing: 2px;
+}
+
+.button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  max-width: 400px;
+  float: right;
+  margin-top: 5px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.list-item {
+  line-height: 4;
+  color: #aaa;
+}
+
+.contact-text {
+  font: 300 18px 'Lato', sans-serif;
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 53px;
+}
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* Social Media Icons */
+.social-media-list {
+  position: relative;
+  font-size: 2.3rem;
+  text-align: center;
   width: 100%;
 }
 
-#contact input[type="text"],
-#contact input[type="email"],
-#contact input[type="tel"],
-#contact input[type="url"],
-#contact textarea {
-  width: 100%;
-  border: 1px solid #ccc;
-  background: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
+.social-media-list li a {
+  color: #fff;
 }
 
-#contact input[type="text"]:hover,
-#contact input[type="email"]:hover,
-#contact input[type="tel"]:hover,
-#contact input[type="url"]:hover,
-#contact textarea:hover {
-  -webkit-transition: border-color 0.3s ease-in-out;
-  -moz-transition: border-color 0.3s ease-in-out;
-  transition: border-color 0.3s ease-in-out;
-  border: 1px solid #aaa;
+.social-media-list li {
+  position: relative; 
+  top: 0;
+  left: -20px;
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  margin: 10px auto;
+  line-height: 70px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27,27,27);
+  cursor: pointer; 
+  transition: all .2s ease-in-out;
 }
 
-#contact textarea {
-  height: 100px;
-  max-width: 100%;
-  resize: none;
+.social-media-list li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all .2s ease-in-out;
 }
 
-#contact button[type="submit"] {
-  cursor: pointer;
-  width: 100%;
-  border: none;
-  background: #E8492D
-  color: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
-  font-size: 15px;
+.social-media-list li:hover {
+  background-color: #fff; 
 }
 
-#contact button[type="submit"]:hover {
-  background:#E8492D;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+.social-media-list li:hover:after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
 }
 
-#contact button[type="submit"]:active {
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+.social-media-list li:hover a {
+  color: #111;
 }
 
 .copyright {
+  font: 200 14px 'Oswald', sans-serif;
+  color: #555;
+  letter-spacing: 1px;
   text-align: center;
 }
 
-#contact input:focus,
-#contact textarea:focus {
-  outline: 0;
-  border: 1px solid #aaa;
+hr {
+  border-color: rgba(255,255,255,.8); ;
 }
 
-::-webkit-input-placeholder {
-  color: #E8492D;
+/* Begin Media Queries*/
+@media screen and (max-width: 760px) {
+    #contact {
+        height: 1000px;
+    }
+  .section-header {
+    font-size: 65px;
+  }
+  .direct-contact-container, .form-horizontal {
+    float: none;
+    margin: 10px auto;
+  }  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 300px;
+  }    
+  .social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+  .social-media-list li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
 }
 
-:-moz-placeholder {
-  color: #888;
+@media screen and (max-width: 569px) {
+  #contact {
+    height: 1200px;
+    }
+  .section-header{
+    font-size: 50px;
+  }
+  .direct-contact-container, .form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }  
+  .form-control, textarea {
+    max-width: 340px;
+    margin: 0 auto;
+  }
+  
+  .name, .email, textarea {
+    width: 280px;
+  } 
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+  }  
+  .social-media-list {
+    left: 0;
+  }
+  .social-media-list li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    font-size: 2rem;
+  }
+  .social-media-list li:after {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+  
 }
 
-::-moz-placeholder {
-  color: #888;
+@media screen and (max-width: 410px) {
+  .send-button {
+    width: 99%;
+  }
 }
-
-:-ms-input-placeholder {
-  color: #888;
-}
-        
-  </style>
+  </style>  
 <footer>
     <p>
         Amarsingh Devloper @copy, 2019
